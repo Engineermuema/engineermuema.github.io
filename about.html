@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy FC - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        /* Styling for the background image */
+        #about {
+            background-image: url('images/bg.png'); /* Replace with your image URL */
+            background-size: contain; /* Ensure the entire image fits within the section */
+            background-position: top center; /* Align the image to the top center */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            position: relative;
+            height: 100vh; /* Full viewport height */
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+            z-index: 1;
+        }
+
+        #about-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes fade-in-up {
+            0% { opacity: 0; transform: translateY(20px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out both;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4">
+                <img src="images/logo.png" alt="Legacy FC Logo" class="h-10 w-10 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
+                <h1 class="text-3xl font-bold tracking-wide">Legacy FC</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li>
+                        <a href="index.html" class="relative group px-4 py-2">
+                            <span class="relative z-10 text-lg font-medium tracking-wide">Home</span>
+                            <span class="absolute inset-0 bg-white/20 rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="relative group px-4 py-2">
+                            <span class="relative z-10 text-lg font-medium tracking-wide">About</span>
+                            <span class="absolute inset-0 bg-white/20 rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="team.html" class="relative group px-4 py-2">
+                            <span class="relative z-10 text-lg font-medium tracking-wide">Team</span>
+                            <span class="absolute inset-0 bg-white/20 rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="relative group px-4 py-2">
+                            <span class="relative z-10 text-lg font-medium tracking-wide">Contact</span>
+                            <span class="absolute inset-0 bg-white/20 rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="text-white">
+        <div id="about-content" class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-yellow-400 drop-shadow-lg animate-fade-in-up">About Legacy FC</h2>
+            <p class="text-lg max-w-3xl mx-auto mb-6 animate-fade-in-up">
+                Legacy FC was founded in 2020 during the COVID-19 pandemic. Since then, the club has impacted the lives of many youths in Athi River through football, mentorship, and guidance. 
+                At Legacy FC, we believe in not only playing football but also growing spiritually and building a strong foundation for life.
+            </p>
+            <p class="text-lg max-w-3xl mx-auto mb-6 animate-fade-in-up">
+                Our mission is to foster talent, promote sportsmanship, and create a lasting impact in the community. We strive to build a legacy that transcends the game and inspires greatness in everyone we touch.
+            </p>
+            <p class="text-lg max-w-3xl mx-auto animate-fade-in-up">
+                With determination and unity, we are optimistic that we will win the Mavoko Sub County League and continue to inspire greatness in our community.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-900 via-purple-800 to-indigo-900 text-white py-8 mt-12 shadow-inner">
+        <div class="container mx-auto px-4 flex flex-col items-center space-y-4">
+            <!-- Animated Logo -->
+            <div class="relative group">
+                <span class="absolute inset-0 rounded-full blur-lg opacity-60 group-hover:opacity-90 transition duration-500 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 animate-pulse"></span>
+                <img src="images/logo.png" alt="Legacy FC Logo"
+                    class="relative h-16 w-16 mx-auto mb-2 z-10 transform transition-transform duration-500 hover:scale-110 hover:rotate-6 shadow-xl" />
+            </div>
+            <!-- Animated Text -->
+            <p class="text-lg font-semibold tracking-wide animate-fade-in-up">
+                © 2025 Legacy FC. Made and maintained by <span class="text-yellow-400 font-bold">Engineer Muema</span>. All rights reserved.
+            </p>
+            <!-- Quick Links -->
+            <div class="flex space-x-6 mt-2">
+                <a href="index.html" class="text-white hover:text-yellow-400 transition-colors duration-300">Home</a>
+                <a href="about.html" class="text-white hover:text-yellow-400 transition-colors duration-300">About</a>
+                <a href="team.html" class="text-white hover:text-yellow-400 transition-colors duration-300">Team</a>
+                <a href="contact.html" class="text-white hover:text-yellow-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Social Icons (dancing/bouncing) -->
+            <div class="flex space-x-6 mt-2">
+                <a href="https://facebook.com/share/16fPSCTRaj/" target="_blank" class="hover:text-blue-400 transition-colors duration-300 dancing-icon">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb5ToGzLNSaBnDLnuK1g" target="_blank" class="hover:text-green-400 transition-colors duration-300 dancing-icon">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="hover:text-cyan-400 transition-colors duration-300 dancing-icon">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-pink-400 transition-colors duration-300 dancing-icon">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <style>
+            @keyframes dancing {
+                0%, 100% { transform: translateY(0) scale(1);}
+                10% { transform: translateY(-8px) scale(1.1);}
+                20% { transform: translateY(0) scale(1);}
+                30% { transform: translateY(-6px) scale(1.08);}
+                40% { transform: translateY(0) scale(1);}
+                50% { transform: translateY(-4px) scale(1.05);}
+                60%, 100% { transform: translateY(0) scale(1);}
+            }
+            .dancing-icon {
+                animation: dancing 1.5s infinite;
+                display: inline-block;
+            }
+            /* Stagger the animation for each icon for a more lively effect */
+            .dancing-icon:nth-child(1) { animation-delay: 0s; }
+            .dancing-icon:nth-child(2) { animation-delay: 0.3s; }
+            .dancing-icon:nth-child(3) { animation-delay: 0.6s; }
+            .dancing-icon:nth-child(4) { animation-delay: 0.9s; }
+        </style>
+    </footer>
+</body>
+</html>
